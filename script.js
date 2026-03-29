@@ -1,13 +1,7 @@
-/* ============================================================
-   VELAS LUZ Y ELEGANCIA – JavaScript
-   ============================================================ */
-
 'use strict';
 
-// ── Cart State ──────────────────────────────────────────────
 let cart = [];
 
-// ── Navbar scroll effect ─────────────────────────────────────
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (window.scrollY > 60) {
@@ -17,7 +11,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ── Mobile Menu ──────────────────────────────────────────────
 function toggleMenu() {
   const links = document.getElementById('navLinks');
   links.classList.toggle('open');
@@ -30,13 +23,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// ── Scroll to Section ────────────────────────────────────────
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
 
-// ── Intersection Observer (fade-in) ─────────────────────────
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -60,7 +51,6 @@ document.querySelectorAll('.fade-in').forEach((el, i) => {
   fadeObserver.observe(el);
 });
 
-// ── Floating Particles ───────────────────────────────────────
 (function createParticles() {
   const container = document.getElementById('particles');
   if (!container) return;
@@ -78,7 +68,6 @@ document.querySelectorAll('.fade-in').forEach((el, i) => {
   }
 })();
 
-// ── Catalog Filter ───────────────────────────────────────────
 function filterProducts(category) {
   document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
   event.target.classList.add('active');
@@ -92,7 +81,6 @@ function filterProducts(category) {
   });
 }
 
-// ── Cart Functions ───────────────────────────────────────────
 function addToCart(name, price, category) {
   const existing = cart.find(item => item.name === name);
   if (existing) {
@@ -209,7 +197,6 @@ function openCart() {
   document.body.style.overflow = 'hidden';
 }
 
-// ── Order Form Submission ────────────────────────────────────
 function submitOrder(e) {
   e.preventDefault();
 
@@ -273,7 +260,6 @@ function closeModal() {
   document.getElementById('successModal').classList.remove('open');
 }
 
-// ── Lightbox ─────────────────────────────────────────────────
 function openLightbox(src, title) {
   document.getElementById('lightboxImg').src = src;
   document.getElementById('lightboxImg').alt = title;
@@ -296,7 +282,6 @@ document.getElementById('successModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
 });
 
-// ── Contact Form ─────────────────────────────────────────────
 function submitContact(e) {
   e.preventDefault();
 
@@ -321,7 +306,6 @@ _Enviado desde el formulario de contacto_`;
   e.target.reset();
 }
 
-// ── Toast Notification ───────────────────────────────────────
 function showToast(msg, type = 'success') {
   const existing = document.querySelector('.toast');
   if (existing) existing.remove();
@@ -358,7 +342,6 @@ function showToast(msg, type = 'success') {
   }, 3200);
 }
 
-// ── Smooth anchor links ──────────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (e) => {
     const href = a.getAttribute('href');
@@ -371,7 +354,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// ── Number counter animation on stats ───────────────────────
 function animateCounter(el, target, suffix) {
   let current = 0;
   const step = target / 60;
@@ -410,7 +392,6 @@ const statsObserver = new IntersectionObserver((entries) => {
 const statsEl = document.querySelector('.about-stats');
 if (statsEl) statsObserver.observe(statsEl);
 
-// ── Active nav link on scroll ────────────────────────────────
 const sections = document.querySelectorAll('section[id]');
 const navLinksAll = document.querySelectorAll('.nav-links a');
 
