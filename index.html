@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velas Luz y Elegancia – Velas Artesanales Aromáticas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="flame-icon">🕯️</span>
+        <span class="brand-name">Velas Luz y Elegancia</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#pedidos">Pedidos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="cart-btn" id="cartBtn" onclick="toggleCart()">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Artesanía con Alma Martínez</p>
+      <h1 class="hero-title">Velas Luz<br /><em>y Elegancia</em></h1>
+      <p class="hero-desc">
+        Velas artesanales aromáticas elaboradas a mano con ingredientes naturales.<br />
+        Transforma tu hogar en un santuario de paz y bienestar.
+      </p>
+      <div class="hero-btns">
+        <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+        <a href="#pedidos" class="btn btn-outline">Hacer Pedido</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="candle-showcase">
+        <div class="candle c1">
+          <div class="candle-body"></div>
+          <div class="flame">
+            <div class="flame-inner"></div>
+          </div>
+        </div>
+        <div class="candle c2">
+          <div class="candle-body"></div>
+          <div class="flame">
+            <div class="flame-inner"></div>
+          </div>
+        </div>
+        <div class="candle c3">
+          <div class="candle-body"></div>
+          <div class="flame">
+            <div class="flame-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down" onclick="scrollToSection('nosotros')">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <span class="section-tag">Nuestra Historia</span>
+          <h2>Artesanía que ilumina tu mundo</h2>
+          <p>
+            En <strong>Velas Luz y Elegancia</strong> cada vela es una obra de arte.
+            Elaboradas a mano con cera de soja 100% natural, aceites esenciales
+            puros y mechas de algodón sin plomo, nuestras velas son seguras para
+            ti y el medio ambiente.
+          </p>
+          <p>
+            Cada aroma ha sido cuidadosamente seleccionado para crear experiencias
+            únicas: relajar, energizar, romanticar o simplemente hacer que tu
+            hogar huela divino.
+          </p>
+          <div class="about-badges">
+            <div class="badge">🌿 100% Natural</div>
+            <div class="badge">✋ Hecho a Mano</div>
+            <div class="badge">♻️ Eco-Friendly</div>
+            <div class="badge">💛 Sin Parabenos</div>
+          </div>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat-card">
+            <span class="stat-num">+500</span>
+            <span class="stat-label">Clientes felices</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">30+</span>
+            <span class="stat-label">Aromas únicos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">5★</span>
+            <span class="stat-label">Calificación promedio</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item fade-in">
+          <div class="feature-icon">🚚</div>
+          <h3>Entrega a Domicilio</h3>
+          <p>Llevamos tus velas directamente a tu puerta con embalaje protegido.</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon">💵</div>
+          <h3>Pago Contra Entrega</h3>
+          <p>Paga en efectivo cuando recibas tu pedido. Sin tarjetas ni transferencias.</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon">🎁</div>
+          <h3>Empaque de Regalo</h3>
+          <p>Presentación elegante ideal para regalar en cualquier ocasión especial.</p>
+        </div>
+        <div class="feature-item fade-in">
+          <div class="feature-icon">⏱️</div>
+          <h3>Entrega en 24-48h</h3>
+          <p>Recibe tu pedido al día siguiente o a más tardar en 48 horas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CATALOG ========== -->
+  <section class="catalog" id="catalogo">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Nuestras Creaciones</span>
+        <h2>Catálogo de Velas</h2>
+        <p>Descubre nuestra colección de aromas irresistibles, perfectos para cada momento.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="catalog-filters fade-in">
+        <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
+        <button class="filter-btn" onclick="filterProducts('verano')">Verano</button>
+        <button class="filter-btn" onclick="filterProducts('love')">Love</button>
+        <button class="filter-btn" onclick="filterProducts('coffetime')">Coffe Time</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+
+        <div class="product-card fade-in" data-category="verano">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/verano.jpeg', 'Verano')">
+            <img src="img/verano.jpeg" alt="Verano" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Verano</div>
+            <h3>Verano</h3>
+            <p>Aroma suave y reconfortante que calma la mente y prepara para el sueño profundo.</p>
+            <div class="product-details">
+              <span class="product-size">☁️ 200g · 40h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q18.00</span>
+              <button class="add-cart" onclick="addToCart('Verano', 18, 'verano')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="verano">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/veranoUno.jpeg', 'Verano Uno')">
+            <img src="img/veranoUno.jpeg" alt="Verano Uno" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Verano</div>
+            <h3>Verano Uno</h3>
+            <p>Fragancia floral intensa y seductora. Perfecta para veladas especiales en pareja.</p>
+            <div class="product-details">
+              <span class="product-size">🌹 180g · 35h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q20.00</span>
+              <button class="add-cart" onclick="addToCart('Verano Uno', 20, 'verano')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="verano">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/veranoDos.jpeg', 'Verano Dos')">
+            <img src="img/veranoDos.jpeg" alt="Verano Dos" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Verano</div>
+            <h3>Verano Dos</h3>
+            <p>Fresca y vibrante. Ideal para concentrarte, trabajar o empezar el día con energía.</p>
+            <div class="product-details">
+              <span class="product-size">🍋 160g · 30h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q16.00</span>
+              <button class="add-cart" onclick="addToCart('Verano Dos', 16, 'verano')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="love">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/love.jpeg', 'Love')">
+            <img src="img/love.jpeg" alt="Love" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Love</div>
+            <h3>Love</h3>
+            <p>Aroma cálido y amaderado con notas terrosas. Crea un ambiente acogedor y sofisticado.</p>
+            <div class="product-details">
+              <span class="product-size">🪵 220g · 50h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q22.00</span>
+              <button class="add-cart" onclick="addToCart('Love', 22, 'love')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="coffetime">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/coffeTime.jpeg', 'Coffe Time')">
+            <img src="img/coffeTime.jpeg" alt="Coffe Time" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Coffe Time</div>
+            <h3>Coffe Time</h3>
+            <p>Refrescante y purificante. Limpia el ambiente y despeja la mente con sus notas herbales.</p>
+            <div class="product-details">
+              <span class="product-size">🍃 190g · 38h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q17.00</span>
+              <button class="add-cart" onclick="addToCart('Coffe Time', 17, 'coffetime')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="romantico">
+          <div class="product-img" style="background: linear-gradient(135deg,#f3e5f5,#9c27b0);">
+            <div class="product-candle">
+              <div class="p-flame"></div>
+              <div class="p-body" style="background:linear-gradient(180deg,#ce93d8,#6a1b9a);"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Romántico</div>
+            <h3>Frutos Rojos & Canela</h3>
+            <p>Dulce, especiado y tentador. Un aroma que evoca tardes de otoño junto al fuego.</p>
+            <div class="product-details">
+              <span class="product-size">🍓 200g · 42h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q19.00</span>
+              <button class="add-cart" onclick="addToCart('Frutos Rojos & Canela', 19, 'romantico')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="hogar">
+          <div class="product-badge oferta">Oferta</div>
+          <div class="product-img" style="background: linear-gradient(135deg,#fff3e0,#ff9800);">
+            <div class="product-candle">
+              <div class="p-flame"></div>
+              <div class="p-body" style="background:linear-gradient(180deg,#ffcc80,#e65100);"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Hogar</div>
+            <h3>Naranja & Clavo</h3>
+            <p>Aroma festivo y cálido. Perfecto para llenar el hogar de bienestar durante todo el año.</p>
+            <div class="product-details">
+              <span class="product-size">🍊 170g · 32h de duración</span>
+            </div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">Q15.00</span>
+                <span class="price-old">Q18.00</span>
+              </div>
+              <button class="add-cart" onclick="addToCart('Naranja & Clavo', 15, 'hogar')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="energizante">
+          <div class="product-img" style="background: linear-gradient(135deg,#e3f2fd,#1565c0);">
+            <div class="product-candle">
+              <div class="p-flame"></div>
+              <div class="p-body" style="background:linear-gradient(180deg,#90caf9,#0d47a1);"></div>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Energizante</div>
+            <h3>Océano & Sal Marina</h3>
+            <p>Fresco y limpio como el mar. Ideal para meditación y espacios de bienestar.</p>
+            <div class="product-details">
+              <span class="product-size">🌊 210g · 45h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q21.00</span>
+              <button class="add-cart" onclick="addToCart('Océano & Sal Marina', 21, 'energizante')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PACK ESPECIAL -->
+        <div class="product-card product-pack fade-in" data-category="all">
+          <div class="product-badge pack">Pack Especial</div>
+          <div class="product-img pack-img">
+            <div class="pack-candles">
+              <div class="p-body mini" style="background:linear-gradient(180deg,#c9a96e,#8b6914);"></div>
+              <div class="p-body mini" style="background:linear-gradient(180deg,#f48fb1,#c2185b);"></div>
+              <div class="p-body mini" style="background:linear-gradient(180deg,#ffe082,#f57f17);"></div>
+            </div>
+            <div class="pack-flame-group">🔥</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Pack Sorpresa</div>
+            <h3>Pack Trio Aromático</h3>
+            <p>Elige 3 velas de tu preferencia y recibe un descuento especial. Perfecto para regalar.</p>
+            <div class="product-details">
+              <span class="product-size">🎁 3 velas a elegir · Incluye caja elegante</span>
+            </div>
+            <div class="product-footer">
+              <div>
+                <span class="product-price">Q48.00</span>
+                <span class="price-old">Q57.00</span>
+              </div>
+              <button class="add-cart" onclick="addToCart('Pack Trio Aromático', 48, 'pack')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Lo que dicen nuestras clientas</span>
+        <h2>Reseñas Reales</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"Las velas de lavanda son increíbles. Mi cuarto huele divino y duermo muchísimo mejor desde que las uso. ¡Las recomiendo con los ojos cerrados!"</p>
+          <div class="reviewer">
+            <div class="avatar">M</div>
+            <div>
+              <strong>María González</strong>
+              <span>Mixco</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"Pedí el Pack Trío para el cumpleaños de mi mamá y quedó enamorada. El empaque es hermosísimo y los aromas son únicos. Definitivamente volveré a comprar."</p>
+          <div class="reviewer">
+            <div class="avatar">L</div>
+            <div>
+              <strong>Laura Martínez</strong>
+              <span>Zona 14</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>"El servicio fue excelente. Me llegó el pedido al día siguiente perfectamente empacado. La vela de Sándalo es mi favorita, dura muchísimo. 100% recomendadas."</p>
+          <div class="reviewer">
+            <div class="avatar">S</div>
+            <div>
+              <strong>Sofía Ramírez</strong>
+              <span>Zona 10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORDER SECTION ========== -->
+  <section class="order-section" id="pedidos">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Pide desde casa</span>
+        <h2>Realizar Pedido a Domicilio</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo para coordinar la entrega.</p>
+      </div>
+
+      <div class="order-layout">
+        <!-- Info Panel -->
+        <div class="order-info fade-in">
+          <div class="info-card">
+            <h3>💵 Método de Pago</h3>
+            <div class="payment-method">
+              <div class="payment-icon">💵</div>
+              <div>
+                <strong>Solo Efectivo Contra Entrega</strong>
+                <p>Paga cuando recibas tu pedido en la puerta de tu casa. No requerimos pagos anticipados ni transferencias.</p>
+              </div>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>🚚 Información de Envío</h3>
+            <ul class="delivery-info">
+              <li>⏱️ Entrega en <strong>24 a 48 horas</strong></li>
+              <li>📦 Embalaje especial antiroturas</li>
+              <li>📍 Cobertura en toda la ciudad</li>
+              <li>🔔 Te avisamos cuando salga tu pedido</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>📞 ¿Tienes dudas?</h3>
+            <p>Escríbenos directamente por WhatsApp para preguntas, pedidos personalizados o regalos especiales.</p>
+            <a href="https://wa.me/50248843997?text=Hola!%20Quiero%20hacer%20un%20pedido%20de%20Velas%20Luz%20y%20Elegancia"
+               class="whatsapp-btn" target="_blank">
+              <span>💬</span> Chatear por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="order-form-wrapper fade-in">
+          <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+            <h3>📝 Datos del Pedido</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre completo *</label>
+                <input type="text" id="clientName" placeholder="Tu nombre" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono / WhatsApp *</label>
+                <input type="tel" id="clientPhone" placeholder="Ej: +502 2223 5800" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Dirección de entrega *</label>
+              <input type="text" id="clientAddress" placeholder="Calle, número, barrio" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Ciudad *</label>
+                <input type="text" id="clientCity" placeholder="Tu ciudad" required />
+              </div>
+              <div class="form-group">
+                <label>Barrio / Localidad</label>
+                <input type="text" id="clientNeighborhood" placeholder="Barrio o localidad" />
+              </div>
+            </div>
+
+            <!-- Cart Summary in Form -->
+            <div class="form-cart-summary" id="formCartSummary">
+              <h4>🛒 Productos seleccionados</h4>
+              <div id="formCartItems">
+                <p class="empty-cart-msg">No has agregado productos aún. Ve al catálogo y agrega velas a tu pedido.</p>
+              </div>
+              <div class="form-cart-total" id="formCartTotal" style="display:none;">
+                <span>Total a pagar (efectivo):</span>
+                <strong id="formTotalAmount">$0</strong>
+              </div>
+            </div>
+
+            <!-- Manual product selection if cart is empty -->
+            <div class="form-group">
+              <label>¿Qué velas deseas? (puedes describir aquí)</label>
+              <textarea id="clientProducts" rows="3" placeholder="Ej: 2 velas de Lavanda y Vainilla, 1 vela de Sándalo..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Notas adicionales</label>
+              <textarea id="clientNotes" rows="2" placeholder="Horario preferido de entrega, instrucciones especiales..."></textarea>
+            </div>
+
+            <div class="payment-notice">
+              <span>💵</span>
+              <p><strong>Recuerda:</strong> El pago es <strong>únicamente en efectivo</strong> al momento de recibir tu pedido. ¡No hay cobros anticipados!</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              ✅ Confirmar Pedido
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <span class="section-tag">Contáctanos</span>
+          <h2>Estamos para ti</h2>
+          <p>¿Tienes alguna pregunta, quieres un pedido personalizado o una cotización especial para eventos? No dudes en escribirnos.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="c-icon">📞</span>
+              <div>
+                <strong>Teléfono / WhatsApp</strong>
+                <span>+502 4884 3997</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="c-icon">📧</span>
+              <div>
+                <strong>Correo Electrónico</strong>
+                <span>jg2149098@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="c-icon">📍</span>
+              <div>
+                <strong>Ubicación</strong>
+                <span>Cdad de Guatemala, Zona 17 camino canalitos</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="c-icon">⏰</span>
+              <div>
+                <strong>Horario de Atención</strong>
+                <span>Lun – Dom: 8:00 am – 7:00 pm</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link">📘 Facebook</a>
+            <a href="https://www.instagram.com/velasluzyelegancia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" target="_blank">📸 Instagram</a>
+            <a href="#" class="social-link">🎵 TikTok</a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper fade-in">
+          <form class="contact-form" onsubmit="submitContact(event)">
+            <h3>Envíanos un Mensaje</h3>
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label>Mensaje</label>
+              <textarea rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje 💌</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="flame-icon">🕯️</span>
+          <span>Velas Luz y Elegancia</span>
+        </div>
+        <p>Artesanía natural que transforma tus espacios con luz y aroma.</p>
+        <div class="footer-badges">
+          <span>🌿 Natural</span>
+          <span>✋ Artesanal</span>
+          <span>💵 Pago Contra Entrega</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Velas Luz y Elegancia · Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ y cera de soja natural</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CART SIDEBAR ========== -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Tu Pedido</h3>
+      <button onclick="toggleCart()" class="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Tu carrito está vacío.<br/>¡Agrega algunas velas!</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">Q0</strong>
+      </div>
+      <p class="cart-payment-note">💵 Pago en efectivo al recibir</p>
+      <a href="#pedidos" class="btn btn-primary btn-full" onclick="toggleCart()">Proceder al Pedido ➜</a>
+    </div>
+  </div>
+
+  <!-- ========== SUCCESS MODAL ========== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <h2>¡Pedido Recibido!</h2>
+      <p>Gracias por tu compra. Nos pondremos en contacto contigo pronto para coordinar la entrega.</p>
+      <p><strong>Recuerda:</strong> El pago es en efectivo al momento de la entrega.</p>
+      <button class="btn btn-primary" onclick="closeModal()">¡Perfecto!</button>
+    </div>
+  </div>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+    <div class="lightbox-box" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
