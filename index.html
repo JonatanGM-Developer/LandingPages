@@ -168,6 +168,10 @@
         <button class="filter-btn" onclick="filterProducts('milkshake')">Milkshake</button>
         <button class="filter-btn" onclick="filterProducts('cupcakes')">Cupcakes</button>
         <button class="filter-btn" onclick="filterProducts('navidad')">Navidad</button>
+        <button class="filter-btn" onclick="filterProducts('flores')">Flores</button>
+        <button class="filter-btn" onclick="filterProducts('arreglos')">Arreglos</button>
+        <button class="filter-btn" onclick="filterProducts('bebidas')">Bebidas</button>
+        <button class="filter-btn" onclick="filterProducts('especial')">Especial</button>
       </div>
 
       <div class="products-grid" id="productsGrid">
@@ -366,11 +370,164 @@
           </div>
         </div>
 
+
+        <div class="product-card fade-in" data-category="flores">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/florMargarita.png', 'Flor Margarita')">
+            <img src="img/florMargarita.png" alt="Flor Margarita" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Flores</div>
+            <h3>Flor Margarita</h3>
+            <p>Fresca y delicada con aroma floral suave. Trae la esencia del jardín a tu hogar.</p>
+            <div class="product-details">
+              <span class="product-size">🌼 180g · 38h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q18.00</span>
+              <button class="add-cart" onclick="addToCart('Flor Margarita', 18, 'flores')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="flores">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/florDíaDeLaMadre.png', 'Flor Día de la Madre')">
+            <img src="img/florDíaDeLaMadre.png" alt="Flor Día de la Madre" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Flores</div>
+            <h3>Flor Día de la Madre</h3>
+            <p>Edición especial con aroma floral intenso. El regalo perfecto para mamá en su día.</p>
+            <div class="product-details">
+              <span class="product-size">💐 200g · 42h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q22.00</span>
+              <button class="add-cart" onclick="addToCart('Flor Día de la Madre', 22, 'flores')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="arreglos">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/arregloMariposaRojo.png', 'Arreglo Mariposa Rojo')">
+            <img src="img/arregloMariposaRojo.png" alt="Arreglo Mariposa Rojo" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Arreglos</div>
+            <h3>Arreglo Mariposa Rojo</h3>
+            <p>Arreglo artesanal con diseño de mariposa en tonos rojos. Elegante y apasionado.</p>
+            <div class="product-details">
+              <span class="product-size">🦋 220g · 45h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q25.00</span>
+              <button class="add-cart" onclick="addToCart('Arreglo Mariposa Rojo', 25, 'arreglos')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="arreglos">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/arregloVirgenGuadalupe.png', 'Arreglo Virgen Guadalupe')">
+            <img src="img/arregloVirgenGuadalupe.png" alt="Arreglo Virgen Guadalupe" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Arreglos</div>
+            <h3>Arreglo Virgen Guadalupe</h3>
+            <p>Arreglo devocional con imagen de la Virgen de Guadalupe. Especial y lleno de fe.</p>
+            <div class="product-details">
+              <span class="product-size">🕯️ 230g · 48h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q28.00</span>
+              <button class="add-cart" onclick="addToCart('Arreglo Virgen Guadalupe', 28, 'arreglos')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="arreglos">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/virgenArregloCompleto.png', 'Virgen Arreglo Completo')">
+            <img src="img/virgenArregloCompleto.png" alt="Virgen Arreglo Completo" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Arreglos</div>
+            <h3>Virgen Arreglo Completo</h3>
+            <p>Arreglo completo y decorado con la imagen de la Virgen. Ideal como ofrenda o regalo devocional.</p>
+            <div class="product-details">
+              <span class="product-size">🕯️ 250g · 50h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q35.00</span>
+              <button class="add-cart" onclick="addToCart('Virgen Arreglo Completo', 35, 'arreglos')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="bebidas">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/bebidaCerveza.png', 'Bebida Cerveza')">
+            <img src="img/bebidaCerveza.png" alt="Bebida Cerveza" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Bebidas</div>
+            <h3>Bebida Cerveza</h3>
+            <p>Aroma fresco y ligeramente herbal. Divertida y original, perfecta para espacios masculinos.</p>
+            <div class="product-details">
+              <span class="product-size">🍺 190g · 40h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q19.00</span>
+              <button class="add-cart" onclick="addToCart('Bebida Cerveza', 19, 'bebidas')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="especial">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/detalleRevelacionGenero.png', 'Revelación de Género')">
+            <img src="img/detalleRevelacionGenero.png" alt="Revelación de Género" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Especial</div>
+            <h3>Revelación de Género</h3>
+            <p>Vela especial para ese momento tan esperado. Sorprende a todos con un toque de elegancia.</p>
+            <div class="product-details">
+              <span class="product-size">🎀 200g · 42h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q25.00</span>
+              <button class="add-cart" onclick="addToCart('Revelación de Género', 25, 'especial')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="navidad">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/muñecoSemiDerretidoNavidad.png', 'Muñeco Semi Derretido Navidad')">
+            <img src="img/muñecoSemiDerretidoNavidad.png" alt="Muñeco Semi Derretido Navidad" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Navidad</div>
+            <h3>Muñeco Navidad</h3>
+            <p>Divertido muñeco navideño semi derretido con aroma a canela y pino. Único y original.</p>
+            <div class="product-details">
+              <span class="product-size">⛄ 210g · 44h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q22.00</span>
+              <button class="add-cart" onclick="addToCart('Muñeco Navidad', 22, 'navidad')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  
+
   <section class="testimonials">
     <div class="container">
       <div class="section-header fade-in">
