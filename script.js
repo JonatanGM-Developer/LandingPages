@@ -299,7 +299,25 @@ document.getElementById('successModal').addEventListener('click', function(e) {
 // ── Contact Form ─────────────────────────────────────────────
 function submitContact(e) {
   e.preventDefault();
-  showToast('¡Mensaje enviado! Te responderemos pronto. 💛', 'success');
+
+  const name    = document.getElementById('contactName').value.trim();
+  const email   = document.getElementById('contactEmail').value.trim();
+  const message = document.getElementById('contactMessage').value.trim();
+
+  const msg = `📩 *SOLICITUD DE INFORMACIÓN – Velas Luz y Elegancia*
+
+👤 *Nombre:* ${name}
+📧 *Email:* ${email}
+
+💬 *Mensaje:*
+${message}
+
+_Enviado desde el formulario de contacto_`;
+
+  const waUrl = `https://wa.me/573001234567?text=${encodeURIComponent(msg)}`;
+  window.open(waUrl, '_blank');
+
+  showToast('Abriendo WhatsApp con tu mensaje... 💛', 'success');
   e.target.reset();
 }
 
