@@ -163,70 +163,14 @@
       
       <div class="catalog-filters fade-in">
         <button class="filter-btn active" onclick="filterProducts('all')">Todos</button>
-        <button class="filter-btn" onclick="filterProducts('verano')">Verano</button>
         <button class="filter-btn" onclick="filterProducts('love')">Love</button>
         <button class="filter-btn" onclick="filterProducts('coffetime')">Coffe Time</button>
+        <button class="filter-btn" onclick="filterProducts('milkshake')">Milkshake</button>
+        <button class="filter-btn" onclick="filterProducts('cupcakes')">Cupcakes</button>
+        <button class="filter-btn" onclick="filterProducts('navidad')">Navidad</button>
       </div>
 
-      
       <div class="products-grid" id="productsGrid">
-
-        <div class="product-card fade-in" data-category="verano">
-          <div class="product-img product-img-photo" onclick="openLightbox('img/verano.jpeg', 'Verano')">
-            <img src="img/verano.jpeg" alt="Verano" />
-            <div class="img-zoom-hint">🔍 Ver imagen</div>
-          </div>
-          <div class="product-info">
-            <div class="product-category">Verano</div>
-            <h3>Verano</h3>
-            <p>Aroma suave y reconfortante que calma la mente y prepara para el sueño profundo.</p>
-            <div class="product-details">
-              <span class="product-size">☁️ 200g · 40h de duración</span>
-            </div>
-            <div class="product-footer">
-              <span class="product-price">Q18.00</span>
-              <button class="add-cart" onclick="addToCart('Verano', 18, 'verano')">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card fade-in" data-category="verano">
-          <div class="product-img product-img-photo" onclick="openLightbox('img/veranoUno.jpeg', 'Verano Uno')">
-            <img src="img/veranoUno.jpeg" alt="Verano Uno" />
-            <div class="img-zoom-hint">🔍 Ver imagen</div>
-          </div>
-          <div class="product-info">
-            <div class="product-category">Verano</div>
-            <h3>Verano Uno</h3>
-            <p>Fragancia floral intensa y seductora. Perfecta para veladas especiales en pareja.</p>
-            <div class="product-details">
-              <span class="product-size">🌹 180g · 35h de duración</span>
-            </div>
-            <div class="product-footer">
-              <span class="product-price">Q20.00</span>
-              <button class="add-cart" onclick="addToCart('Verano Uno', 20, 'verano')">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card fade-in" data-category="verano">
-          <div class="product-img product-img-photo" onclick="openLightbox('img/veranoDos.jpeg', 'Verano Dos')">
-            <img src="img/veranoDos.jpeg" alt="Verano Dos" />
-            <div class="img-zoom-hint">🔍 Ver imagen</div>
-          </div>
-          <div class="product-info">
-            <div class="product-category">Verano</div>
-            <h3>Verano Dos</h3>
-            <p>Fresca y vibrante. Ideal para concentrarte, trabajar o empezar el día con energía.</p>
-            <div class="product-details">
-              <span class="product-size">🍋 160g · 30h de duración</span>
-            </div>
-            <div class="product-footer">
-              <span class="product-price">Q16.00</span>
-              <button class="add-cart" onclick="addToCart('Verano Dos', 16, 'verano')">+ Agregar</button>
-            </div>
-          </div>
-        </div>
 
         <div class="product-card fade-in" data-category="love">
           <div class="product-img product-img-photo" onclick="openLightbox('img/love.jpeg', 'Love')">
@@ -236,13 +180,70 @@
           <div class="product-info">
             <div class="product-category">Love</div>
             <h3>Love</h3>
-            <p>Aroma cálido y amaderado con notas terrosas. Crea un ambiente acogedor y sofisticado.</p>
+            <p>Fragancia romántica y envolvente, perfecta para crear momentos especiales e íntimos.</p>
             <div class="product-details">
-              <span class="product-size">🪵 220g · 50h de duración</span>
+              <span class="product-size">🌹 200g · 40h de duración</span>
             </div>
             <div class="product-footer">
               <span class="product-price">Q22.00</span>
               <button class="add-cart" onclick="addToCart('Love', 22, 'love')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="love">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/Corazones.jpeg', 'Corazones')">
+            <img src="img/Corazones.jpeg" alt="Corazones" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Love</div>
+            <h3>Corazones</h3>
+            <p>Dulce y floral, ideal para regalar en fechas especiales o simplemente consentirte.</p>
+            <div class="product-details">
+              <span class="product-size">💕 180g · 38h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q20.00</span>
+              <button class="add-cart" onclick="addToCart('Corazones', 20, 'love')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="love">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/corazonExagonal.jpeg', 'Corazón Exagonal')">
+            <img src="img/corazonExagonal.jpeg" alt="Corazón Exagonal" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Love</div>
+            <h3>Corazón Exagonal</h3>
+            <p>Diseño único en forma exagonal con aroma suave y reconfortante. Un regalo inolvidable.</p>
+            <div class="product-details">
+              <span class="product-size">💎 190g · 42h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q25.00</span>
+              <button class="add-cart" onclick="addToCart('Corazón Exagonal', 25, 'love')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="love">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/detalleAmor.jpeg', 'Detalle Amor')">
+            <img src="img/detalleAmor.jpeg" alt="Detalle Amor" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Love</div>
+            <h3>Detalle Amor</h3>
+            <p>El regalo perfecto para esa persona especial. Aroma cálido con notas florales y dulces.</p>
+            <div class="product-details">
+              <span class="product-size">🌸 160g · 35h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q18.00</span>
+              <button class="add-cart" onclick="addToCart('Detalle Amor', 18, 'love')">+ Agregar</button>
             </div>
           </div>
         </div>
@@ -255,9 +256,9 @@
           <div class="product-info">
             <div class="product-category">Coffe Time</div>
             <h3>Coffe Time</h3>
-            <p>Refrescante y purificante. Limpia el ambiente y despeja la mente con sus notas herbales.</p>
+            <p>Aroma a café recién preparado. Energizante y reconfortante, perfecta para las mañanas.</p>
             <div class="product-details">
-              <span class="product-size">🍃 190g · 38h de duración</span>
+              <span class="product-size">☕ 190g · 38h de duración</span>
             </div>
             <div class="product-footer">
               <span class="product-price">Q17.00</span>
@@ -266,97 +267,101 @@
           </div>
         </div>
 
-        <div class="product-card fade-in" data-category="romantico">
-          <div class="product-img" style="background: linear-gradient(135deg,#f3e5f5,#9c27b0);">
-            <div class="product-candle">
-              <div class="p-flame"></div>
-              <div class="p-body" style="background:linear-gradient(180deg,#ce93d8,#6a1b9a);"></div>
-            </div>
+        <div class="product-card fade-in" data-category="coffetime">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/matcha.jpeg', 'Matcha')">
+            <img src="img/matcha.jpeg" alt="Matcha" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
           </div>
           <div class="product-info">
-            <div class="product-category">Romántico</div>
-            <h3>Frutos Rojos & Canela</h3>
-            <p>Dulce, especiado y tentador. Un aroma que evoca tardes de otoño junto al fuego.</p>
+            <div class="product-category">Coffe Time</div>
+            <h3>Matcha</h3>
+            <p>Fresco y herbal con notas de té matcha. Ideal para momentos de relajación y meditación.</p>
+            <div class="product-details">
+              <span class="product-size">🍵 180g · 40h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q17.00</span>
+              <button class="add-cart" onclick="addToCart('Matcha', 17, 'coffetime')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="milkshake">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/milkshakeClasico.png', 'Milkshake Clásico')">
+            <img src="img/milkshakeClasico.png" alt="Milkshake Clásico" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Milkshake</div>
+            <h3>Milkshake Clásico</h3>
+            <p>Dulce y cremoso, con esencia de vainilla y leche. Un aroma nostálgico e irresistible.</p>
+            <div class="product-details">
+              <span class="product-size">🥛 200g · 42h de duración</span>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">Q19.00</span>
+              <button class="add-cart" onclick="addToCart('Milkshake Clásico', 19, 'milkshake')">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card fade-in" data-category="milkshake">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/milkshakeFresa.png', 'Milkshake Fresa')">
+            <img src="img/milkshakeFresa.png" alt="Milkshake Fresa" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Milkshake</div>
+            <h3>Milkshake Fresa</h3>
+            <p>Frutal y dulce con notas de fresa fresca. Alegre y vibrante para cualquier espacio.</p>
             <div class="product-details">
               <span class="product-size">🍓 200g · 42h de duración</span>
             </div>
             <div class="product-footer">
               <span class="product-price">Q19.00</span>
-              <button class="add-cart" onclick="addToCart('Frutos Rojos & Canela', 19, 'romantico')">+ Agregar</button>
+              <button class="add-cart" onclick="addToCart('Milkshake Fresa', 19, 'milkshake')">+ Agregar</button>
             </div>
           </div>
         </div>
 
-        <div class="product-card fade-in" data-category="hogar">
-          <div class="product-badge oferta">Oferta</div>
-          <div class="product-img" style="background: linear-gradient(135deg,#fff3e0,#ff9800);">
-            <div class="product-candle">
-              <div class="p-flame"></div>
-              <div class="p-body" style="background:linear-gradient(180deg,#ffcc80,#e65100);"></div>
-            </div>
+        <div class="product-card fade-in" data-category="cupcakes">
+          <div class="product-img product-img-photo" onclick="openLightbox('img/cupcakesBirthday.png', 'Cupcakes Birthday')">
+            <img src="img/cupcakesBirthday.png" alt="Cupcakes Birthday" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
           </div>
           <div class="product-info">
-            <div class="product-category">Hogar</div>
-            <h3>Naranja & Clavo</h3>
-            <p>Aroma festivo y cálido. Perfecto para llenar el hogar de bienestar durante todo el año.</p>
+            <div class="product-category">Cupcakes</div>
+            <h3>Cupcakes Birthday</h3>
+            <p>Aroma festivo a pastel de cumpleaños. Dulce y alegre, perfecta para celebrar momentos especiales.</p>
             <div class="product-details">
-              <span class="product-size">🍊 170g · 32h de duración</span>
-            </div>
-            <div class="product-footer">
-              <div>
-                <span class="product-price">Q15.00</span>
-                <span class="price-old">Q18.00</span>
-              </div>
-              <button class="add-cart" onclick="addToCart('Naranja & Clavo', 15, 'hogar')">+ Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-card fade-in" data-category="energizante">
-          <div class="product-img" style="background: linear-gradient(135deg,#e3f2fd,#1565c0);">
-            <div class="product-candle">
-              <div class="p-flame"></div>
-              <div class="p-body" style="background:linear-gradient(180deg,#90caf9,#0d47a1);"></div>
-            </div>
-          </div>
-          <div class="product-info">
-            <div class="product-category">Energizante</div>
-            <h3>Océano & Sal Marina</h3>
-            <p>Fresco y limpio como el mar. Ideal para meditación y espacios de bienestar.</p>
-            <div class="product-details">
-              <span class="product-size">🌊 210g · 45h de duración</span>
+              <span class="product-size">🎂 210g · 45h de duración</span>
             </div>
             <div class="product-footer">
               <span class="product-price">Q21.00</span>
-              <button class="add-cart" onclick="addToCart('Océano & Sal Marina', 21, 'energizante')">+ Agregar</button>
+              <button class="add-cart" onclick="addToCart('Cupcakes Birthday', 21, 'cupcakes')">+ Agregar</button>
             </div>
           </div>
         </div>
 
-        
-        <div class="product-card product-pack fade-in" data-category="all">
-          <div class="product-badge pack">Pack Especial</div>
-          <div class="product-img pack-img">
-            <div class="pack-candles">
-              <div class="p-body mini" style="background:linear-gradient(180deg,#c9a96e,#8b6914);"></div>
-              <div class="p-body mini" style="background:linear-gradient(180deg,#f48fb1,#c2185b);"></div>
-              <div class="p-body mini" style="background:linear-gradient(180deg,#ffe082,#f57f17);"></div>
-            </div>
-            <div class="pack-flame-group">🔥</div>
+        <div class="product-card fade-in" data-category="navidad">
+          <div class="product-badge pack">Edición Especial</div>
+          <div class="product-img product-img-photo" onclick="openLightbox('img/packVelasNavidad.png', 'Pack Velas Navidad')">
+            <img src="img/packVelasNavidad.png" alt="Pack Velas Navidad" />
+            <div class="img-zoom-hint">🔍 Ver imagen</div>
           </div>
           <div class="product-info">
-            <div class="product-category">Pack Sorpresa</div>
-            <h3>Pack Trio Aromático</h3>
-            <p>Elige 3 velas de tu preferencia y recibe un descuento especial. Perfecto para regalar.</p>
+            <div class="product-category">Navidad</div>
+            <h3>Pack Velas Navidad</h3>
+            <p>Colección navideña con aromas de canela, pino y naranja. El regalo perfecto para la temporada.</p>
             <div class="product-details">
-              <span class="product-size">🎁 3 velas a elegir · Incluye caja elegante</span>
+              <span class="product-size">🎄 3 velas · Incluye caja elegante</span>
             </div>
             <div class="product-footer">
               <div>
                 <span class="product-price">Q48.00</span>
                 <span class="price-old">Q57.00</span>
               </div>
-              <button class="add-cart" onclick="addToCart('Pack Trio Aromático', 48, 'pack')">+ Agregar</button>
+              <button class="add-cart" onclick="addToCart('Pack Velas Navidad', 48, 'navidad')">+ Agregar</button>
             </div>
           </div>
         </div>
