@@ -314,7 +314,7 @@ ${message}
 
 _Enviado desde el formulario de contacto_`;
 
-  const waUrl = `https://wa.me/573001234567?text=${encodeURIComponent(msg)}`;
+  const waUrl = `https://wa.me/50248843997?text=${encodeURIComponent(msg)}`;
   window.open(waUrl, '_blank');
 
   showToast('Abriendo WhatsApp con tu mensaje... 💛', 'success');
