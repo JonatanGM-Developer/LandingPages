@@ -156,24 +156,40 @@ function updateCartUI() {
 }
 
 function updateFormCart(totalPrice) {
-  const formItemsEl  = document.getElementById('formCartItems');
-  const formTotalEl  = document.getElementById('formCartTotal');
-  const formAmountEl = document.getElementById('formTotalAmount');
+  const formItemsEl    = document.getElementById('formCartItems');
+  const formTotalEl    = document.getElementById('formCartTotal');
+  const formAmountEl   = document.getElementById('formTotalAmount');
+  const formAnticipoEl = document.getElementById('formAnticipo');
+  const formAnticipoAmountEl = document.getElementById('formAnticipoAmount');
 
   if (!formItemsEl) return;
+
+  const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+  const envio = totalItems >= 3 ? 0 : 25;
+  const totalConEnvio = totalPrice + envio;
+  const anticipo = Math.ceil(totalConEnvio * 0.5);
 
   if (cart.length === 0) {
     formItemsEl.innerHTML = '<p class="empty-cart-msg">No has agregado productos aún. Ve al catálogo y agrega velas a tu pedido.</p>';
     formTotalEl.style.display = 'none';
+    if (formAnticipoEl) formAnticipoEl.style.display = 'none';
   } else {
     formItemsEl.innerHTML = cart.map(item => `
       <div class="form-cart-item">
         <span>🕯️ ${item.name} × ${item.qty}</span>
         <span style="font-weight:700;color:var(--gold-dark)">${formatPrice(item.price * item.qty)}</span>
       </div>
-    `).join('');
-    formAmountEl.textContent = formatPrice(totalPrice);
+    `).join('') + `
+      <div class="form-cart-item" style="color:var(--text-light);font-size:0.85rem;">
+        <span>🚚 Envío${envio === 0 ? ' (¡Gratis! 🎉)' : ' a domicilio'}</span>
+        <span>${envio === 0 ? 'Q0.00' : formatPrice(envio)}</span>
+      </div>`;
+    formAmountEl.textContent = formatPrice(totalConEnvio);
     formTotalEl.style.display = 'flex';
+    if (formAnticipoEl) {
+      formAnticipoAmountEl.textContent = formatPrice(anticipo);
+      formAnticipoEl.style.display = 'flex';
+    }
   }
 }
 
@@ -215,11 +231,19 @@ function submitOrder(e) {
 
   // Build WhatsApp message
   const totalPrice = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+  const envio = totalItems >= 3 ? 0 : 25;
+  const totalConEnvio = totalPrice + envio;
+  const anticipo = Math.ceil(totalConEnvio * 0.5);
+  const saldo = totalConEnvio - anticipo;
 
   let cartLines = '';
   if (cart.length > 0) {
     cartLines = cart.map(i => `• ${i.name} x${i.qty} — ${formatPrice(i.price * i.qty)}`).join('\n');
-    cartLines += `\n\n*TOTAL A PAGAR (efectivo):* ${formatPrice(totalPrice)}`;
+    cartLines += `\n• 🚚 Envío — ${envio === 0 ? 'GRATIS (3+ productos)' : formatPrice(envio)}`;
+    cartLines += `\n\n*Total del pedido:* ${formatPrice(totalConEnvio)}`;
+    cartLines += `\n💳 *Anticipo requerido (50%):* ${formatPrice(anticipo)}`;
+    cartLines += `\n💵 *Saldo contra entrega:* ${formatPrice(saldo)}`;
   } else if (products) {
     cartLines = products;
   } else {
@@ -237,7 +261,7 @@ function submitOrder(e) {
 🛍️ *Productos:*
 ${cartLines}
 
-💵 *Método de pago:* Efectivo contra entrega
+💳 *Forma de pago:* 50% anticipo (transferencia/depósito) + 50% efectivo al recibir
 ${notes ? `\n📝 *Notas:* ${notes}` : ''}
 
 _Pedido realizado desde la web_`;
